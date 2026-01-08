@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Escape Room Maths - Les Mystères des Mathématiques</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="escape-room">
+        <!-- Header avec progression -->
+        <header class="game-header">
+            <h1>🔐 Escape Room Maths</h1>
+            <p class="subtitle">Les Mystères des Mathématiques</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <span class="progress-text" id="progressText">0 / 7 défis complétés</span>
+            </div>
+        </header>
+
+        <!-- La pièce avec les portes -->
+        <main class="room">
+            <div class="room-background">
+                <div class="decorations">
+                    <div class="lamp lamp-1">💡</div>
+                    <div class="lamp lamp-2">💡</div>
+                    <div class="bookshelf">📚</div>
+                    <div class="plant">🪴</div>
+                    <div class="clock">🕐</div>
+                    <div class="map">🗺️</div>
+                </div>
+
+                <div class="doors-container">
+                    <!-- Porte 1 - Toujours déverrouillée -->
+                    <div class="door-wrapper" data-door="1">
+                        <div class="door unlocked" id="door1" onclick="openDoor(1)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">1</span>
+                                    <span class="door-icon">📐</span>
+                                    <span class="door-title">Niveau 1</span>
+                                </div>
+                                <div class="door-handle"></div>
+                            </div>
+                        </div>
+                        <div class="door-status unlocked-status">🔓 Ouvert</div>
+                    </div>
+
+                    <!-- Porte 2 -->
+                    <div class="door-wrapper" data-door="2">
+                        <div class="door locked" id="door2" onclick="tryOpenDoor(2)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">2</span>
+                                    <span class="door-icon">📐</span>
+                                    <span class="door-title">Niveau 2</span>
+                                </div>
+                                <div class="door-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Code requis</div>
+                    </div>
+
+                    <!-- Porte 3 -->
+                    <div class="door-wrapper" data-door="3">
+                        <div class="door locked" id="door3" onclick="tryOpenDoor(3)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">3</span>
+                                    <span class="door-icon">📐</span>
+                                    <span class="door-title">Niveau 3</span>
+                                </div>
+                                <div class="door-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Code requis</div>
+                    </div>
+
+                    <!-- Porte 4 -->
+                    <div class="door-wrapper" data-door="4">
+                        <div class="door locked" id="door4" onclick="tryOpenDoor(4)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">4</span>
+                                    <span class="door-icon">📐</span>
+                                    <span class="door-title">Niveau 4</span>
+                                </div>
+                                <div class="door-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Code requis</div>
+                    </div>
+
+                    <!-- Porte 5 -->
+                    <div class="door-wrapper" data-door="5">
+                        <div class="door locked" id="door5" onclick="tryOpenDoor(5)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">5</span>
+                                    <span class="door-icon">📐</span>
+                                    <span class="door-title">Niveau 5</span>
+                                </div>
+                                <div class="door-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Code requis</div>
+                    </div>
+
+                    <!-- Porte 6 -->
+                    <div class="door-wrapper" data-door="6">
+                        <div class="door locked" id="door6" onclick="tryOpenDoor(6)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">6</span>
+                                    <span class="door-icon">📐</span>
+                                    <span class="door-title">Niveau 6</span>
+                                </div>
+                                <div class="door-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Code requis</div>
+                    </div>
+
+                    <!-- Porte 7 - Finale -->
+                    <div class="door-wrapper" data-door="7">
+                        <div class="door locked final-door" id="door7" onclick="tryOpenDoor(7)">
+                            <div class="door-frame golden">
+                                <div class="door-panel">
+                                    <span class="door-number">⭐</span>
+                                    <span class="door-icon">🏆</span>
+                                    <span class="door-title">Final</span>
+                                </div>
+                                <div class="door-handle golden-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Défi ultime</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Instructions -->
+        <footer class="instructions">
+            <div class="instruction-box">
+                <h3>📋 Comment jouer ?</h3>
+                <ol>
+                    <li>Clique sur une porte <strong>déverrouillée</strong> pour accéder au défi</li>
+                    <li>Réalise l'activité GeoGebra demandée</li>
+                    <li>Appelle ton professeur pour valider ton travail</li>
+                    <li>Obtiens le code pour ouvrir la porte suivante !</li>
+                </ol>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal pour le code -->
+    <div class="modal" id="codeModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>🔐 Entrez le code secret</h2>
+            <p>Pour ouvrir la porte <span id="doorNumberModal"></span></p>
+            <input type="text" id="codeInput" placeholder="CODE..." maxlength="12" autocomplete="off">
+            <button onclick="validateCode()" class="validate-btn">Valider</button>
+            <p class="error-message" id="errorMessage"></p>
+        </div>
+    </div>
+
+    <!-- Modal de succès -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <h2>🎉 Félicitations !</h2>
+            <p id="successMessage"></p>
+            <button onclick="closeSuccessModal()" class="success-btn">Continuer</button>
+        </div>
+    </div>
+
+    <!-- Modal de victoire finale -->
+    <div class="modal" id="victoryModal">
+        <div class="modal-content victory-content">
+            <div class="confetti">🎊</div>
+            <h2>🏆 VICTOIRE ! 🏆</h2>
+            <p>Tu as complété tous les défis de l'Escape Room Maths !</p>
+            <p class="victory-subtitle">Tu es un véritable expert !</p>
+            <div class="trophy-animation">🥇</div>
+            <button onclick="closeVictoryModal()" class="victory-btn">Célébrer !</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

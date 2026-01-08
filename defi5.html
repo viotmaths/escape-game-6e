@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi 5 - Tracer des segments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="defi-style.css">
+</head>
+
+<body>
+    <div class="challenge-page">
+        <header class="challenge-header">
+            <a href="index.html" class="back-btn">← Retour</a>
+            <div class="challenge-info">
+                <span class="challenge-number">Défi 5</span>
+                <h1>✏️ Tracer des segments</h1>
+            </div>
+        </header>
+
+        <main class="challenge-content">
+            <section class="instructions-panel">
+                <h2>🎯 Ta mission</h2>
+                <div class="mission-box">
+                    <p>Trace des segments de <strong>longueurs précises</strong> en utilisant les outils GeoGebra.</p>
+                    <p>Tu dois être exact ! Vérifie tes mesures après avoir tracé.</p>
+                </div>
+
+                <h3>📋 Étapes à suivre :</h3>
+                <ol class="steps-list">
+                    <li>Clique sur l'outil <strong>"Segment de longueur donnée"</strong></li>
+                    <li>Clique sur un point de départ</li>
+                    <li>Entre la longueur demandée</li>
+                    <li>Vérifie avec l'outil "Distance"</li>
+                </ol>
+
+                <h3>🎯 Segments à tracer :</h3>
+                <div class="segments-list">
+                    <p>1. Un segment [AB] de <strong>5 cm</strong></p>
+                    <p>2. Un segment [CD] de <strong>3,5 cm</strong></p>
+                    <p>3. Un segment [EF] de <strong>7,2 cm</strong></p>
+                    <p>4. Un segment [GH] de <strong>4,8 cm</strong></p>
+                </div>
+
+                <div class="tips-box">
+                    <h4>💡 Astuce</h4>
+                    <p>Utilise la virgule (,) et non le point pour les décimaux dans GeoGebra !</p>
+                </div>
+            </section>
+
+            <section class="geogebra-panel">
+                <h2>🔧 Activité GeoGebra</h2>
+                <div class="geogebra-container">
+                    <iframe
+                        src="https://www.geogebra.org/material/iframe/id/classic/width/800/height/500/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                        width="100%" height="500" style="border:0px;" allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="geogebra-note">C'est un GeoGebra vierge - à toi de construire !</p>
+            </section>
+
+            <section class="validation-panel">
+                <h2>✅ Validation</h2>
+                <div class="validation-box">
+                    <p>Tu as fini ? Appelle ton professeur pour valider ton travail !</p>
+                    <p class="validation-questions">Le professeur vérifiera :</p>
+                    <ul>
+                        <li>Que tous les segments sont présents</li>
+                        <li>Que les longueurs sont exactes</li>
+                        <li>Que les segments sont bien nommés</li>
+                    </ul>
+                    <div class="call-teacher">
+                        <span class="hand-icon">🙋</span>
+                        <span>Lève la main pour appeler le professeur !</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="challenge-footer">
+            <p>Après validation, ton professeur te donnera le code pour la porte suivante 🔐</p>
+        </footer>
+    </div>
+
+    <style>
+        .segments-list {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .segments-list p {
+            margin-bottom: 8px;
+            padding-left: 10px;
+            border-left: 3px solid var(--secondary);
+        }
+    </style>
+</body>
+
+</html>
