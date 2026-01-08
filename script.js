@@ -4,9 +4,7 @@ const CODES = {
     2: "MATHS2026",    // Code pour ouvrir la porte 2
     3: "MATHS2026",     // Code pour ouvrir la porte 3
     4: "MATHS2026",     // Code pour ouvrir la porte 4
-    5: "MATHS2026",     // Code pour ouvrir la porte 5
-    6: "MATHS2026",      // Code pour ouvrir la porte 6
-    7: "MATHS2026"       // Code pour ouvrir la porte finale
+    5: "MATHS2026"      // Code pour ouvrir la porte finale
 };
 
 // URLs des activités GeoGebra (à personnaliser)
@@ -15,9 +13,7 @@ const ACTIVITY_URLS = {
     2: "defi2.html",
     3: "defi3.html",
     4: "defi4.html",
-    5: "defi5.html",
-    6: "defi6.html",
-    7: "defi7.html"
+    5: "defi7.html"     // La porte 5 ouvre la page de félicitations
 };
 
 // ===== État du jeu =====
@@ -114,8 +110,8 @@ function unlockDoor(doorNumber) {
         updateDoorVisual(doorNumber);
         updateProgress();
 
-        if (doorNumber === 7) {
-            showVictoryModal();
+        if (doorNumber === 5) {
+            showSuccessModal(doorNumber); // On ouvre le modal succès qui mène à la page
         } else {
             showSuccessModal(doorNumber);
         }
@@ -151,14 +147,14 @@ function updateDoorVisual(doorNumber) {
 }
 
 function updateAllDoors() {
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 1; i <= 5; i++) {
         updateDoorVisual(i);
     }
 }
 
 function updateProgress() {
     const completed = gameState.completedDoors.length;
-    const total = 7;
+    const total = 5;
     const percentage = (completed / total) * 100;
 
     document.getElementById('progressFill').style.width = `${percentage}%`;
