@@ -104,6 +104,12 @@ function validateCode() {
 function unlockDoor(doorNumber) {
     if (!gameState.unlockedDoors.includes(doorNumber)) {
         gameState.unlockedDoors.push(doorNumber);
+
+        // Marquer le défi précédent comme complété (sauf si c'est la porte 1)
+        if (doorNumber > 1) {
+            markDoorCompleted(doorNumber - 1);
+        }
+
         saveGameState();
         updateDoorVisual(doorNumber);
         updateProgress();
