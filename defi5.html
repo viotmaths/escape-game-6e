@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi 5 - Triangle et Cercle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="defi-style.css">
+    <style>
+        .mission-box {
+            background-color: #f1f8ff;
+            color: #2d3436;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tips-box {
+            background-color: #fff3cd;
+            color: #2d3436;
+            border-left: 5px solid #f1c40f;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="challenge-page">
+        <header class="challenge-header">
+            <a href="index.html" class="back-btn">← Retour</a>
+            <div class="challenge-info">
+                <span class="challenge-number">Défi 5</span>
+                <h1>📐 Triangle et bissectrices dans un cercle</h1>
+            </div>
+        </header>
+
+        <main class="challenge-content">
+            <section class="instructions-panel">
+                <h2>🎯 Construction</h2>
+                <div class="mission-box">
+                    <ol style="margin-left: 20px;">
+                        <li>Trace un cercle de centre O.</li>
+                        <li>Place trois points A, B et C sur le cercle.</li>
+                        <li>Relie A, B et C pour former le triangle ABC.</li>
+                        <li>Trace la bissectrice de l’angle en A.</li>
+                        <li>Trace la bissectrice de l’angle en B.</li>
+                        <li>Trace la bissectrice de l’angle en C.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="geogebra-panel">
+                <h2>🔧 Activité GeoGebra</h2>
+                <div class="geogebra-container">
+                    <div id="ggb-element"></div>
+                    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+                    <script>
+                        var params = {
+                            "appName": "classic",
+                            "width": 800,
+                            "height": 500,
+                            "showToolBar": true,
+                            "showAlgebraInput": false,
+                            "showMenuBar": false,
+                            "filename": "niveau5.ggb",
+                            "enableRightClick": false,
+                            "enableLabelDrags": false,
+                            "enableShiftDragZoom": true,
+                            "showResetIcon": true,
+                            "language": "fr",
+                            "forceBundle": true,
+                            "useBrowserForJS": false,
+                            "allowStyleBar": false,
+                            "preventFocus": false,
+                            "scaleContainerClass": "geogebra-container",
+                            "autoHeight": true
+                        };
+                        var applet = new GGBApplet(params, true);
+                        window.addEventListener("load", function () {
+                            applet.inject('ggb-element');
+                        });
+                    </script>
+                </div>
+                <p class="geogebra-note">Si l'activité ne charge pas, assure-toi que le fichier
+                    <strong>niveau5.ggb</strong> est bien dans le dossier.</p>
+            </section>
+
+            <section class="validation-panel">
+                <h2>✅ Question d’observation</h2>
+                <div class="validation-box">
+                    <label for="observationInput"
+                        style="font-weight: bold; display: block; margin-bottom: 10px;">Réponds à la question :</label>
+                    <p style="font-style: italic; margin-bottom: 5px;">« Qu’est‑ce que tu remarques sur la position du
+                        point d'intersection des trois bissectrices par rapport au triangle et au cercle ? »</p>
+                    <textarea id="observationInput" rows="3" placeholder="Écris ta réponse ici..."
+                        style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #dfe6e9; font-family: 'Nunito', sans-serif; box-sizing: border-box;"></textarea>
+
+                    <div class="call-teacher" style="margin-top: 20px;">
+                        <span class="hand-icon">🙋</span>
+                        <span>Appelle ton professeur pour valider ton observation !</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="challenge-footer">
+            <p>Après validation, ton professeur te donnera l'accès à la récompense finale ! 🏆</p>
+        </footer>
+    </div>
+</body>
+
+</html>
