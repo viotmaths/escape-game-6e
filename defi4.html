@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Défi 4 - Calculer des périmètres</title>
+    <title>Défi 4 - Tracer une bissectrice</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="defi-style.css">
@@ -16,29 +16,27 @@
             <a href="index.html" class="back-btn">← Retour</a>
             <div class="challenge-info">
                 <span class="challenge-number">Défi 4</span>
-                <h1>📐 Calculer des périmètres</h1>
+                <h1>📐 Tracer une bissectrice</h1>
             </div>
         </header>
 
         <main class="challenge-content">
             <section class="instructions-panel">
-                <h2>🎯 Ta mission</h2>
+                <h2>📚 Mini Cours : La Bissectrice</h2>
                 <div class="mission-box">
-                    <p>Calcule le <strong>périmètre</strong> de chaque figure géométrique.</p>
-                    <p>N'oublie pas : le périmètre, c'est le <strong>tour complet</strong> de la figure !</p>
+                    <p><strong>Qu'est-ce qu'une bissectrice ?</strong></p>
+                    <p>La <strong>bissectrice</strong> d’un angle est la demi-droite qui partage cet angle en deux
+                        angles de même mesure.</p>
+                    <p>On peut dire que la bissectrice est l’<strong>axe de symétrie</strong> de l’angle.</p>
                 </div>
 
-                <h3>📋 Formules utiles :</h3>
-                <div class="formulas-box">
-                    <p><strong>Carré :</strong> P = 4 × côté</p>
-                    <p><strong>Rectangle :</strong> P = 2 × (L + l)</p>
-                    <p><strong>Triangle :</strong> P = côté₁ + côté₂ + côté₃</p>
-                    <p><strong>Polygone :</strong> P = somme de tous les côtés</p>
-                </div>
-
+                <h2>🎯 Tes consignes</h2>
                 <div class="tips-box">
-                    <h4>💡 Rappel</h4>
-                    <p>Le périmètre s'exprime toujours avec une <strong>unité de longueur</strong> (cm, m, km...)</p>
+                    <ol style="margin-left: 20px;">
+                        <li>Trace la bissectrice de l'angle affiché dans GeoGebra.</li>
+                        <li>Vérifie que les deux angles obtenus ont la même mesure.</li>
+                        <li>Dans la zone de texte ci-dessous, complète la phrase de définition.</li>
+                    </ol>
                 </div>
             </section>
 
@@ -75,22 +73,22 @@
                     </script>
                 </div>
                 <p class="geogebra-note">Si l'activité ne charge pas, assure-toi que le fichier
-                    <strong>niveau4.ggb</strong> est bien dans le dossier.</p>
+                    <strong>niveau4.ggb</strong> est bien dans le dossier.
+                </p>
             </section>
 
             <section class="validation-panel">
                 <h2>✅ Validation</h2>
                 <div class="validation-box">
-                    <p>Tu as fini ? Appelle ton professeur pour valider ton travail !</p>
-                    <p class="validation-questions">Questions possibles :</p>
-                    <ul>
-                        <li>Quel est le périmètre du rectangle ?</li>
-                        <li>Quelle figure a le plus grand périmètre ?</li>
-                        <li>Explique comment tu as calculé</li>
-                    </ul>
-                    <div class="call-teacher">
+                    <label for="definitionInput"
+                        style="font-weight: bold; display: block; margin-bottom: 10px;">Complète la phrase :</label>
+                    <p style="font-style: italic; margin-bottom: 5px;">« La bissectrice d’un angle est … »</p>
+                    <textarea id="definitionInput" rows="3" placeholder="Recopie la définition du mini cours ici..."
+                        style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #dfe6e9; font-family: 'Nunito', sans-serif; box-sizing: border-box;"></textarea>
+
+                    <div class="call-teacher" style="margin-top: 20px;">
                         <span class="hand-icon">🙋</span>
-                        <span>Lève la main pour appeler le professeur !</span>
+                        <span>Appelle ton professeur pour valider ton tracé et ta définition !</span>
                     </div>
                 </div>
             </section>
@@ -102,20 +100,17 @@
     </div>
 
     <style>
-        .formulas-box {
-            background: linear-gradient(135deg, rgba(0, 206, 201, 0.2) 0%, rgba(108, 92, 231, 0.2) 100%);
+        .mission-box {
+            background-color: #f1f8ff;
+            border-left: 5px solid #3498db;
             padding: 15px;
-            border-radius: 10px;
-            margin-top: 10px;
+            margin-bottom: 20px;
         }
 
-        .formulas-box p {
-            margin-bottom: 8px;
-            font-family: 'Nunito', sans-serif;
-        }
-
-        .formulas-box p:last-child {
-            margin-bottom: 0;
+        .tips-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #f1c40f;
+            padding: 15px;
         }
     </style>
 </body>
