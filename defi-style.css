@@ -128,12 +128,24 @@ section h3 {
 }
 
 .mission-box p {
-    margin-bottom: 10px;
-    line-height: 1.6;
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
 .mission-box p:last-child {
     margin-bottom: 0;
+}
+
+.mission-box ul,
+.mission-box ol {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.mission-box li {
+    margin-bottom: 12px;
+    line-height: 1.7;
 }
 
 .steps-list {
@@ -153,7 +165,7 @@ section h3 {
 
 .tips-box {
     background: rgba(253, 203, 110, 0.15);
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
     border: 1px solid rgba(253, 203, 110, 0.3);
@@ -161,7 +173,17 @@ section h3 {
 
 .tips-box h4 {
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.tips-box p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.tips-box li {
+    margin-bottom: 12px;
+    line-height: 1.7;
 }
 
 /* ===== GeoGebra Panel ===== */
