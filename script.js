@@ -1,39 +1,38 @@
 // ===== Configuration des codes secrets =====
 // PROFESSEUR : Modifiez ces codes comme vous le souhaitez !
 const CODES = {
-    const CODES = {
-        2: "MATHS2026",    // Code pour ouvrir la porte 2
-        3: "MATHS2026",     // Code pour ouvrir la porte 3
-        4: "MATHS2026",     // Code pour ouvrir la porte 4
-        5: "MATHS2026",     // Code pour ouvrir la porte 5
-        6: "MATHS2026"      // Code pour ouvrir la porte finale
-    };
+    2: "MATHS2026",    // Code pour ouvrir la porte 2
+    3: "MATHS2026",    // Code pour ouvrir la porte 3
+    4: "MATHS2026",    // Code pour ouvrir la porte 4
+    5: "MATHS2026",    // Code pour ouvrir la porte 5
+    6: "MATHS2026"     // Code pour ouvrir la porte finale
+};
 
-    // URLs des activités GeoGebra (à personnaliser)
-    const ACTIVITY_URLS = {
-        1: "defi1.html",
-        2: "defi2.html",
-        3: "defi3.html",
-        4: "defi4.html",
-        5: "defi5.html",
-        6: "defi7.html"     // La porte 6 ouvre la page de félicitations
-    };
+// URLs des activités GeoGebra (à personnaliser)
+const ACTIVITY_URLS = {
+    1: "defi1.html",
+    2: "defi2.html",
+    3: "defi3.html",
+    4: "defi4.html",
+    5: "defi5.html",
+    6: "defi7.html"     // La porte 6 ouvre la page de félicitations
+};
 
-    // ===== État du jeu =====
-    let gameState = {
-        unlockedDoors: [1], // La porte 1 est toujours déverrouillée
-        completedDoors: [],
-        currentDoorToUnlock: null
-    };
+// ===== État du jeu =====
+let gameState = {
+    unlockedDoors: [1], // La porte 1 est toujours déverrouillée
+    completedDoors: [],
+    currentDoorToUnlock: null
+};
 
-    // Charger l'état sauvegardé
-    function loadGameState() {
-        const saved = localStorage.getItem('escapeRoomMaths');
-if (saved) {
-    gameState = JSON.parse(saved);
-    updateAllDoors();
-    updateProgress();
-}
+// Charger l'état sauvegardé
+function loadGameState() {
+    const saved = localStorage.getItem('escapeRoomMaths');
+    if (saved) {
+        gameState = JSON.parse(saved);
+        updateAllDoors();
+        updateProgress();
+    }
 }
 
 // Sauvegarder l'état
