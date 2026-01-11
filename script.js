@@ -157,8 +157,9 @@ function updateAllDoors() {
 }
 
 function updateProgress() {
-    const completed = gameState.completedDoors.length;
-    const total = 7;
+    // On ne compte que les portes de 1 à 6 comme défis
+    const completed = gameState.completedDoors.filter(d => d <= 6).length;
+    const total = 6;
     const percentage = (completed / total) * 100;
 
     document.getElementById('progressFill').style.width = `${percentage}%`;

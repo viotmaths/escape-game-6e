@@ -7,7 +7,24 @@
     <title>🏆 VICTOIRE !</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="defi-style.css">
+    <style>
+        .math-symbol {
+            position: fixed;
+            top: -20px;
+            color: #2e86de;
+            opacity: 0.8;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +39,7 @@
         <main class="challenge-content">
             <div class="victory-section"
                 style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                <div style="font-size: 80px; margin-bottom: 20px;">🎊</div>
+                <div style="font-size: 80px; margin-bottom: 20px;">🎉</div>
                 <h2 style="color: #27ae60; font-family: 'Fredoka One', cursive; margin-bottom: 20px;">Tu as terminé
                     l'Escape Game !</h2>
                 <p style="font-size: 1.2rem; color: #7f8c8d; margin-bottom: 30px;">
@@ -33,6 +50,33 @@
             </div>
         </main>
     </div>
+
+    <script>
+        function createMathConfetti() {
+            const symbols = ['π', '∑', '∫', '√', 'α', 'β', '∞', '≈', '≠', '≤', '≥', '÷', '×', '📐', '✏️'];
+            const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#e67e22'];
+
+            setInterval(() => {
+                const el = document.createElement('div');
+                el.classList.add('math-symbol');
+                el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.color = colors[Math.floor(Math.random() * colors.length)];
+                el.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                el.style.animationDuration = (Math.random() * 3 + 2) + 's';
+
+                document.body.appendChild(el);
+
+                // Nettoyage après l'animation
+                setTimeout(() => {
+                    el.remove();
+                }, 5000);
+            }, 300); // Un nouveau symbole toutes les 300ms
+        }
+
+        // Lancer l'animation au chargement
+        window.addEventListener('load', createMathConfetti);
+    </script>
 </body>
 
 </html>
