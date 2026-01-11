@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi 6 - Division d'Angle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="defi-style.css">
+    <style>
+        .mission-box {
+            background-color: #f1f8ff;
+            color: #2d3436;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tips-box {
+            background-color: #fff3cd;
+            color: #2d3436;
+            border-left: 5px solid #f1c40f;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="challenge-page">
+        <header class="challenge-header">
+            <a href="index.html" class="back-btn">← Retour</a>
+            <div class="challenge-info">
+                <span class="challenge-number">Défi 6</span>
+                <h1>📐 Diviser un angle en 4</h1>
+            </div>
+        </header>
+
+        <main class="challenge-content">
+            <section class="instructions-panel">
+                <h2>🎯 Ta mission</h2>
+                <div class="mission-box">
+                    <p>On te donne un angle au hasard.</p>
+                    <p><strong>Ton objectif :</strong> Partager cet angle en 4 angles de même mesure (égaux).</p>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li>Utilise les outils de construction (compas, règle, bissectrice...).</li>
+                        <li>Construis d'abord une première bissectrice.</li>
+                        <li>Utilise cette bissectrice pour continuer tes partages.</li>
+                        <li>À la fin, tu dois obtenir 4 petits angles identiques.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="geogebra-panel">
+                <h2>🔧 Activité GeoGebra</h2>
+                <div class="geogebra-container">
+                    <div id="ggb-element"></div>
+                    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+                    <script>
+                        var params = {
+                            "appName": "classic",
+                            "width": 800,
+                            "height": 500,
+                            "showToolBar": true,
+                            "showAlgebraInput": false,
+                            "showMenuBar": false,
+                            "material_id": "vmbnxhyx", 
+                            "enableRightClick": false,
+                            "enableLabelDrags": false,
+                            "enableShiftDragZoom": true,
+                            "showResetIcon": true,
+                            "language": "fr",
+                            "forceBundle": true,
+                            "useBrowserForJS": false,
+                            "allowStyleBar": false,
+                            "preventFocus": false,
+                            "scaleContainerClass": "geogebra-container",
+                            "autoHeight": true
+                        };
+                        var applet = new GGBApplet(params, true);
+                        window.addEventListener("load", function () {
+                            applet.inject('ggb-element');
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <section class="validation-panel">
+                <h2>✅ Validation</h2>
+                <div class="validation-box">
+                    <p>Une fois que tu as réussi ta construction :</p>
+                    <div class="call-teacher">
+                        <span class="hand-icon">🙋</span>
+                        <span>Appelle ton professeur pour valider et obtenir le code final !</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="challenge-footer">
+            <p>Courage, la porte finale n'est plus très loin ! 🚪🔑</p>
+        </footer>
+    </div>
+</body>
+
+</html>

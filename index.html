@@ -18,7 +18,7 @@
             <p class="subtitle">Les Mystères des Mathématiques</p>
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill"></div>
-                <span class="progress-text" id="progressText">0 / 6 défis complétés</span>
+                <span class="progress-text" id="progressText">0 / 7 défis complétés</span>
             </div>
         </header>
 
@@ -114,9 +114,25 @@
                         <div class="door-status locked-status">🔒 Code requis</div>
                     </div>
 
-                    <!-- Porte 6 - Finale -->
+                    <!-- Porte 6 -->
                     <div class="door-wrapper" data-door="6">
-                        <div class="door locked final-door" id="door6" onclick="tryOpenDoor(6)">
+                        <div class="door locked" id="door6" onclick="tryOpenDoor(6)">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <span class="door-number">6</span>
+                                    <span class="door-icon">✂️</span>
+                                    <span class="door-title">Niveau 6</span>
+                                </div>
+                                <div class="door-handle"></div>
+                                <div class="lock-icon">🔒</div>
+                            </div>
+                        </div>
+                        <div class="door-status locked-status">🔒 Code requis</div>
+                    </div>
+
+                    <!-- Porte 7 - Finale -->
+                    <div class="door-wrapper" data-door="7">
+                        <div class="door locked final-door" id="door7" onclick="tryOpenDoor(7)">
                             <div class="door-frame golden">
                                 <div class="door-panel">
                                     <span class="door-number">⭐</span>
